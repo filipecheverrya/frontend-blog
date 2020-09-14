@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import { Form } from "@unform/web";
 
-import { Footer } from 'components/Footer';
-import { Button } from 'components/Button';
-import { Input } from 'components/Input';
-import { FormWrapper } from 'styles/helpers';
+import { Footer } from '@/components/Footer';
+import { Button } from '@/components/Button';
+import { Input } from '@/components/Input';
+import { FormWrapper } from '@/styles/helpers';
 
 export default function Home() {
   function handleSubmit(data) {
@@ -21,7 +21,14 @@ export default function Home() {
       <main>
         <Form onSubmit={handleSubmit} noValidate>
           <FormWrapper>
-            <Input label="Email" name="email" variant="outlined" type="email" />
+            <Input
+              label="Email"
+              name="email"
+              variant="outlined"
+              type="email"
+              aria-label="email"
+              autoFocus
+            />
           </FormWrapper>
           <FormWrapper>
             <Input label="Password" name="password" variant="outlined" type="password" />
